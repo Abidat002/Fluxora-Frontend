@@ -182,7 +182,7 @@ export default function Recipient() {
   const [isBiometricEnrolled, setIsBiometricEnrolled] = useState(() => {
     return false;
   });
-  const [backupPin, setBackupPin] = useState(() => {
+  const [backupPin, setBackupPin] = useState<string | null>(() => {
     return null;
   });
   const [isSecurityGateEnabled, setIsSecurityGateEnabled] = useState(() => {

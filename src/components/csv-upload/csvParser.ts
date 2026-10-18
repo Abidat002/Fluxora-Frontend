@@ -354,8 +354,9 @@ export function prepareCsvParse(
       if (e.isMalformedRow) {
         boundErrors.push({
           row: rowNumber,
-          column: String(e.column),
-          message: e.message,
+          // `column` is a canonical header name; a malformed row only knows a
+          // positional index, so it is reported in the message instead.
+          message: `column ${String(e.column)}: ${e.message}`,
         });
         continue;
       }

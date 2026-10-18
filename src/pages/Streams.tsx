@@ -828,6 +828,7 @@ export default function Streams() {
     setRestoredDraft,
     recentlySaved,
     recoveryIdentityMatches,
+    walletAddress,
     handleRestoreSession,
     handleStartFreshSession,
     handleDismissSessionBanner,
@@ -1136,6 +1137,8 @@ export default function Streams() {
           {/* Session recovery — see docs/STREAMS_SESSION_RECOVERY_SPEC.md */}
           {bannerState && recoveryIdentityMatches && (
             <SessionRecoveryBanner
+              accountId={walletAddress}
+              snapshotAccountId={detectedSnapshot?.accountAddress ?? null}
               state={bannerState}
               savedAt={detectedSnapshot?.savedAt ?? Date.now()}
               now={Date.now()}

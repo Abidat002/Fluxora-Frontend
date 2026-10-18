@@ -178,9 +178,6 @@ export function __resetOfflineQueueForTests(): void {
   queue = [];
   sequenceCounter = 0;
   listeners.clear();
-  try {
-    localStorage.removeItem(STORAGE_KEY);
-  } catch (error) {
-    // Ignore localStorage errors in tests
-  }
+  // The queue is memory-only (see the note above), so there is nothing to clear
+  // from localStorage here.
 }
