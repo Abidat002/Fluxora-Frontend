@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "fix/issue-1956-make-breadcrumb-keyboard-and-screen-reader",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "fix/issue-1956-make-breadcrumb-keyboard-and-screen-reader": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "fix/issue-1956-make-breadcrumb-keyboard-and-screen-reader",
+    "origin"
+  ]
+}
